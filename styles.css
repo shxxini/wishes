@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: #c9145a;
+}
+@keyframes floatBalloon {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fallConfetti {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+.card {
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+}
+.card:hover {
+    transform: rotate(-5deg);
+}
+.card:hover .outside {
+    transform: rotateY(-130deg);
+}
+.outside,
+
+.outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+    cursor: pointer;
+}
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    top: 120px
+}
+.front {
+    background-color: #ff9abd;
+}
+.back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e7e7e7, #ffffff 30%);
+}
+.cake {
+    width: 100%;
+    position: absolute;
+    bottom: 30px;
+}
+.top-layer,
+.middle-layer,
+.bottom-layer {
+    height: 80px;
+    width: 240px;
+    top: 185px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+        transparent 50px,
+        #fedbab 50px,
+        #fedbab 60px,
+        transparent 60px
+    ), 
+    radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+}
+.middle-layer {
+    transform: scale(0.85);
+    top: 192px;
+}
+.top-layer {
+    transform: scale(0.7);
+    top: 220px;
+}
+.candle {
+    height: 45px;
+    width: 15px;
+    top: 170px;
+    background: repeating-linear-gradient(
+    45deg,
+    #fd3018 0,
+    #fd3018 5px,
+    #ffa89e 5px,
+    #ffa89e 10px
+);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+}
+.candle:before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: hsl(32, 100%, 50%);
+    border-radius: 0 50% 50% 50%;
+    bottom: 48px;
+    transform: rotate(45deg);
+    left: -1px;
+}
+
+.phone-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff9abd; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.phone-input-container input[type="text"],
+.phone-input-container input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.send-button {
+    padding: 10px;
+    background-color: #4CAF50; /* Green color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.send-button:disabled {
+    background-color: #A9A9A9; /* Greyed out color when disabled */
+    cursor: not-allowed;
+}
+
+.whatsapp-link {
+    text-decoration: none;
+    color: #fff; /* Adjust the color as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,32 @@
+@keyframes balloonFloat {
+    0% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-20px);
+    }
+    100% {
+    transform: translateY(0);
+    }
+}
+
+.balloon {
+    width: 50px;
+    height: 80px;
+    background-color: #e20473;
+    border-radius: 50% 50% 60% 60%;
+    position: relative;
+    animation: balloonFloat 2s ease-in-out infinite;
+    margin-right: 20px; 
+    float: left; 
+}
+
+.string {
+    width: 2px;
+    height: 50px;
+    background-color: #555;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-1px);
+}
