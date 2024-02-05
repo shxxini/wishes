@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  @keyframes confettiFall {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+    }
+  }
+
+  .confetti {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    animation: confettiFall 5s linear infinite;
+    opacity: 0.7;
+  }
+
+  .confetti:nth-child(2n) {
+    left: 20vw;
+    animation-delay: 1s;
+  }
+
+  .confetti:nth-child(3n) {
+    left: 40vw;
+    animation-delay: 2s;
+  }
+
+  .confetti:nth-child(4n) {
+    left: 60vw;
+    animation-delay: 3s;
+  }
+
+  .confetti:nth-child(5n) {
+    left: 80vw;
+    animation-delay: 4s;
+  }
+
+  /* Different colors for confetti */
+  .confetti:nth-child(6n) {
+    background-color: #ff0000; /* Red */
+  }
+
+  .confetti:nth-child(7n) {
+    background-color: #ebf8eb; /* Green */
+  }
+
+  .confetti:nth-child(8n) {
+    background-color: #0000ff; /* Blue */
+  }
+
+  .confetti:nth-child(9n) {
+    background-color: #ff00d9; /* Yellow */
+  }
+
+  .confetti:nth-child(10n) {
+    background-color: #ffbf35; /* Magenta */
+  }
